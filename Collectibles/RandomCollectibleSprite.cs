@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomSprite : MonoBehaviour {
+public class RandomCollectibleSprite : MonoBehaviour {
     public Sprite[] sprites;
     public int currentSprite = -1;
     void Start() {
@@ -16,9 +16,5 @@ public class RandomSprite : MonoBehaviour {
         }
 
         GetComponent<SpriteRenderer>().sprite = sprites[currentSprite];
-    }
-
-    void Update() {
-
     }
 }
