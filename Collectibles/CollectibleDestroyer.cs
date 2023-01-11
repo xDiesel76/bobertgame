@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Collectible : MonoBehaviour {
+public class CollectibleDestroyer : MonoBehaviour {
     public AudioSource collectible;
 
     void OnTriggerEnter2D(Collider2D target) {
