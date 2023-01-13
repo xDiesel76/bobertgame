@@ -13,7 +13,6 @@ public class Explode : MonoBehaviour {
     public AudioSource explode;
     [SerializeField] GameObject gameoverMenu;
     public int totalDebris = 10;
-
     void Update() {
         if (transform.position.y < -105) {
             OnExplode();
@@ -46,7 +45,6 @@ public class Explode : MonoBehaviour {
 
         }
         Destroy(gameObject);
-
         gameoverMenu.SetActive(true);
     }
 }
