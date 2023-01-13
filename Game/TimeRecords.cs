@@ -6,11 +6,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System;
+using UnityEngine.SceneManagement;
 
 public class TimeRecords : MonoBehaviour {
     // private string path = Path.Combine(Directory.GetCurrentDirectory(), "\\timerecords.txt");
     public static TimeRecords instance;
     string timePlayed;
+    
     public void Awake() {
         instance = this;
     }
@@ -20,6 +22,6 @@ public class TimeRecords : MonoBehaviour {
     }
     public void RecordTime() {
         timePlayed = TimerController.instance.GetTime().ToString("mm':'ss':'ff");
-        File.AppendAllText(@"D:\Development\Unity\Bobertquail Game\Assets\Bobert\Scripts\Game\timerecords.txt", timePlayed + Environment.NewLine);
+        File.AppendAllText(@"D:\Development\Unity\Bobertquail Game\Assets\Bobert\Scripts\Game\timerecords.txt", SceneManager.GetActiveScene().name + ": " + timePlayed + Environment.NewLine);
     }
 }
