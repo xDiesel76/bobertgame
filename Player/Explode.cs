@@ -49,7 +49,7 @@ public class Explode : MonoBehaviour {
 
         }
         Destroy(gameObject);
-        
+
         yield return new WaitForSeconds(2);
 
         gameoverMenu.SetActive(true);
