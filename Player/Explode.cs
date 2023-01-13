@@ -14,6 +14,9 @@ public class Explode : MonoBehaviour {
     [SerializeField] GameObject gameoverMenu;
     public int totalDebris = 10;
 
+    void Start() {
+        StartCoroutine(OnExplode());
+    }
     void Update() {
         if (transform.position.y < -105) {
             OnExplode();
@@ -46,6 +49,8 @@ public class Explode : MonoBehaviour {
 
         }
         Destroy(gameObject);
+        
+        yield return new WaitForSeconds(2);
 
         gameoverMenu.SetActive(true);
     }
