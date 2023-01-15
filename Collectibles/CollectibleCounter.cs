@@ -19,7 +19,7 @@ public class CollectibleCounter : MonoBehaviour {
         Collectibles = GameObject.FindGameObjectsWithTag("Collectible").Length;
         numCollectibles.text = Collectibles.ToString();
 
-        if (Collectibles == 0) {
+        if (Collectibles == 0 || Input.GetKey("p")) {
             Time.timeScale = 0f;
             TimerController.instance.EndTimer();
             TimeRecords.instance.RecordTime();
