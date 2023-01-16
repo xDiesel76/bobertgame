@@ -7,7 +7,7 @@ using System.IO;
 public class EndScreen : MonoBehaviour {
     public TextMeshProUGUI timeRecords;
     void Start() {
-        timeRecords.text = File.ReadAllText(@"C:\timerecords.txt");
+        timeRecords.text = File.ReadAllText(@"E:\timerecords.txt");
     }
     public void MenuButton() {
         Initiate.Fade("Menu", Color.black, 1f);

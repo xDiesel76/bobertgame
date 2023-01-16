@@ -12,16 +12,16 @@ public class TimeRecords : MonoBehaviour {
     // private string path = Path.Combine(Directory.GetCurrentDirectory(), "\\timerecords.txt");
     public static TimeRecords instance;
     string timePlayed;
-    
+
     public void Awake() {
         instance = this;
     }
     [RuntimeInitializeOnLoadMethod]
     static void OnRuntimeMethodLoad() {
-        File.WriteAllText(@"C:\timerecords.txt", String.Empty);
+        File.WriteAllText(@"E:\timerecords.txt", String.Empty);
     }
     public void RecordTime() {
         timePlayed = TimerController.instance.GetTime().ToString("mm':'ss':'ff");
-        File.AppendAllText(@"C:\timerecords.txt", SceneManager.GetActiveScene().name + ": " + timePlayed + Environment.NewLine);
+        File.AppendAllText(@"E:\timerecords.txt", SceneManager.GetActiveScene().name.Replace("_", " ") + ": " + timePlayed + Environment.NewLine);
     }
 }
