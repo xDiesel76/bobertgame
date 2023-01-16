@@ -18,10 +18,10 @@ public class TimeRecords : MonoBehaviour {
     }
     [RuntimeInitializeOnLoadMethod]
     static void OnRuntimeMethodLoad() {
-        File.WriteAllText(@"D:\Development\Unity\Bobertquail Game\Assets\Bobert\Scripts\Game\timerecords.txt", String.Empty);
+        File.WriteAllText(@"C:\timerecords.txt", String.Empty);
     }
     public void RecordTime() {
         timePlayed = TimerController.instance.GetTime().ToString("mm':'ss':'ff");
-        File.AppendAllText(@"D:\Development\Unity\Bobertquail Game\Assets\Bobert\Scripts\Game\timerecords.txt", SceneManager.GetActiveScene().name + ": " + timePlayed + Environment.NewLine);
+        File.AppendAllText(@"C:\timerecords.txt", SceneManager.GetActiveScene().name + ": " + timePlayed + Environment.NewLine);
     }
 }
