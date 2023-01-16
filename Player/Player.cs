@@ -6,9 +6,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
-    public float speed = 100f;
+    public float speed = 300f;
     public Vector2 maxVeolcity = new Vector2(60, 100);
-    public float flySpeed = 50f;
+    public float flySpeed = 300f;
     public bool standing;
     public float standingThreshold = 4f;
     public float airSpeedMultiplier = .3f;
@@ -19,6 +19,7 @@ public class Player : MonoBehaviour {
     private Animator animator;
 
     void Start() {
+        Application.targetFrameRate = 60;
         body2D = GetComponent<Rigidbody2D>();
         renderer2D = GetComponent<SpriteRenderer>();
         controller = GetComponent<PlayerController>();
