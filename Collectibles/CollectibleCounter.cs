@@ -20,11 +20,12 @@ public class CollectibleCounter : MonoBehaviour {
         numCollectibles.text = Collectibles.ToString();
 
         if (Collectibles == 0 || Input.GetKey("p")) {
-            Time.timeScale = 0f;
             TimerController.instance.EndTimer();
             TimeRecords.instance.RecordTime();
             pauseMenu.SetActive(false);
             continueMenu.SetActive(true);
+            Time.timeScale = 0f;
+
         }
     }
 }

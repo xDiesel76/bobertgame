@@ -18,10 +18,10 @@ public class TimeRecords : MonoBehaviour {
     }
     [RuntimeInitializeOnLoadMethod]
     static void OnRuntimeMethodLoad() {
-        File.WriteAllText(@"E:\timerecords.txt", String.Empty);
+        File.WriteAllText(@"D:\timerecords.txt", String.Empty);
     }
     public void RecordTime() {
         timePlayed = TimerController.instance.GetTime().ToString("mm':'ss':'ff");
-        File.AppendAllText(@"E:\timerecords.txt", SceneManager.GetActiveScene().name.Replace("_", " ") + ": " + timePlayed + Environment.NewLine);
+        File.AppendAllText(@"D:\timerecords.txt", SceneManager.GetActiveScene().name.Replace("_", " ") + ": " + timePlayed + Environment.NewLine);
     }
 }
