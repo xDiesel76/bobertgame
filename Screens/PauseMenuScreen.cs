@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour {
+public class PauseMenuScreen : MonoBehaviour {
     [SerializeField] GameObject pauseMenu;
     public void Pause() {
         pauseMenu.SetActive(true);

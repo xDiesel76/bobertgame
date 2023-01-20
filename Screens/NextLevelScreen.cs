@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NextLevel : MonoBehaviour {
+public class NextLevelScreen : MonoBehaviour {
 
     public string levelNum;
     public void Next() {
